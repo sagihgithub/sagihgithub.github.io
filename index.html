@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>title</title>
+    <script type="text/javascript" src="scripts/calculator.js"></script>
+    <script type="text/javascript" src="scripts/overlay.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/theme_c.css"/>
+    <link rel="stylesheet" href="css/calculator_c.css"/>
+    <link rel="stylesheet" href="css/overlay_c.css"/>
+</head>
+<body>
+    <div class="vwprt-hght-frm stck-cntnt-vrtcly">
+        <div id="dv_hdr" class="cntrl-avn push-cntnt-apart" style="--drctn: row;">
+            <img id="im_logo" src="assets/icons/logo.svg"/>
+            <div id="dv_opn_lgn" onclick="openLgn();" class="stck-cntnt-vrtcly">
+                <img src="assets/icons/login.svg"/>
+                <span>login</span>
+            </div>
+        </div>
+        <div id="dv_ttl">Electric Cables Cross Section Calculations</div>
+        <div data-grow="grdy" class="bg-frm-1 align-cntnt-cntr">
+            <form class="cntrl-avn">
+                <span id="sp_date">01.01.2000</span>
+                <div class="push-cntnt-apart" style="--drctn: row;">
+                    <input id="Text1" type="text" placeholder="Customer" class="shrt-txt-box txt-box-prfl" />
+                    <input id="Text2" type="text" placeholder="Facility Name" class="shrt-txt-box txt-box-prfl" />
+                </div>
+                <input id="Text3" type="text" placeholder="Remarks" class="long-txt-box txt-box-prfl" />
+                <ul id="ul_calc_inpt" class="list-group list-group-horizontal">
+                    <!--generate row-->
+                    <li id="li_gnrt_row" class="list-group-item align-cntnt-cntr txt-prfl-1">
+                        <span>+</span>
+                    </li>
+                    <!--description-->
+                    <li data-grow="grdy" class="list-group-item align-cntnt-cntr txt-prfl-1">
+                        <textarea id="TextArea1" cols="15" rows="1" placeholder="Description" class="txt-area-prfl color-1"></textarea>
+                    </li>
+                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <!--power-->
+                    <li data-grow="grdy" class="list-group-item align-cntnt-cntr txt-prfl-1">
+                        <select id="Select1" class="slct-prfl color-1">
+                            <option>Power [Kw]</option>
+                            <option>15</option>
+                        </select>
+                    </li>
+                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <!--cable-->
+                    <li id="li_cbl" data-grow="grdy" class="list-group-item align-cntnt-cntr txt-prfl-1">                        
+                        <!--the purpose of the span container is to prevent from the radio tag to expand to the full width of its li ancestor tag due to its 'display:flex' definition-->
+                        <span data-role="rd_btn" class="cntr-inpt-txt">
+                            <input id="Radio1" type="radio" name="cbl_grp" class="rdio-prfl" /><label data-role="rd_lbl">Al</label>
+                        </span>
+                        <span data-role="rd_btn" class="cntr-inpt-txt">
+                            <input id="Radio2" type="radio" name="cbl_grp" class="rdio-prfl" /><label data-role="rd_lbl">Cu</label>
+                        </span>
+                    </li>
+                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <!--wire-->
+                    <li id="li_wire" data-grow="grdy" class="list-group-item align-cntnt-cntr txt-prfl-1">
+                        <span data-role="rd_btn" class="cntr-inpt-txt">
+                            <input id="Radio3" type="radio" name="wr_grp" class="rdio-prfl" /><label data-role="rd_lbl">3 Wire</label>
+                        </span>
+                        <span data-role="rd_btn" class="cntr-inpt-txt">
+                            <input id="Radio4" type="radio" name="wr_grp" class="rdio-prfl" /><label data-role="rd_lbl">Single</label>
+                        </span>
+                    </li>
+                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <!--ampacity-->
+                    <li data-grow="grdy" class="list-group-item color-1 align-cntnt-cntr txt-prfl-1">Ampacity [A]</li>
+                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <!--reserve-->
+                    <li data-grow="grdy" class="list-group-item color-2 align-cntnt-cntr txt-prfl-1">Reserve (%)</li>
+                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <!--imax-->
+                    <li data-grow="grdy" class="list-group-item color-2 align-cntnt-cntr txt-prfl-1">Imax</li>
+                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>               
+                    <!--mm2-->
+                    <li data-grow="grdy" class="list-group-item color-2 align-cntnt-cntr txt-prfl-1">S [mm^2]</li>
+                </ul>
+                <div class="push-cntnt-apart" style="--drctn: row;">
+                    <div id="dv_rst" onclick="rstCalc();">
+                        <img src="assets/icons/reset.svg"/>
+                        <span>Reset</span>
+                    </div>
+                    <input id="btn_sbmt" type="submit" value="add row" onclick="return gnrtRow();" />
+                </div>
+            </form>
+        </div>
+        <div id="dv_ftr">bes-eng.co.il &copy; all rights reserved</div>
+    </div>
+    <div id="dv_ovrly" class="align-cntnt-cntr">
+        <div id="dv_ovrly_cntnt">
+            <span id="sp_cls_ovrly" onclick="clsLgn()">&times;</span>
+            <form>
+                <table id="tbl_id_data">
+                    <tr>
+                        <td id="lgn_inpt" class="id-opt">
+                            <div class="stck-cntnt-vrtcly">
+                                <div class="title">
+                                    <span>welcome back, please</span>
+                                    <span>Login</span>
+                                </div>
+                                <div data-grow="grdy" class="push-cntnt-apart" style="--drctn: column;">
+                                    <div>
+                                        <input id="Text4" type="text" placeholder="email" class="txt-box-prfl-ovrly" style="--color: white;" />
+                                        <input id="Text5" type="text" placeholder="password" class="txt-box-prfl-ovrly" style="--color: white;" />
+                                        <table id="tbl_lgn_optns">
+                                            <tr>
+                                                <td>                                                
+                                                    <!--the purpose of the span container is to prevent from the checkbox tag to expand to the full width of its td ancestor tag due to its 'display:flex' definition-->
+                                                    <span class="cntr-inpt-txt">
+                                                        <input id="Checkbox1" type="checkbox" class="chckbx-prfl"/>
+                                                        <label data-role="cb_lbl">keep me logged in</label>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <a id="a_rst_psswrd" href="javascript:void(0)" class="anchr-prfl" onclick="return rstPsswrd();" style="--color: white; --dcrtn:underline;">reset password</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div>
+                                        <button id="btn_lgn" class="btn-prfl-ovrly" onclick="return login();" style="--color: white;">log me in</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td id="sign_inpt" class="id-opt">
+                            <div class="stck-cntnt-vrtcly">
+                                <div class="title">
+                                    <span>in order to save your calculation, please</span>
+                                    <span>Sign Up</span>
+                                </div>
+                                <div data-grow="grdy" class="push-cntnt-apart" style="--drctn: column;">
+                                    <div>
+                                        <input id="Text6" type="text" placeholder="your email" class="txt-box-prfl-ovrly" style="--color: #156982;" />
+                                        <input id="Text7" type="text" placeholder="create username" class="txt-box-prfl-ovrly" style="--color: #156982;" />
+                                        <input id="Text8" type="text" placeholder="create password" class="txt-box-prfl-ovrly" style="--color: #156982;" />
+                                    </div>
+                                    <div>
+                                        <button id="btn_sgn" class="btn-prfl-ovrly" onclick="return signin();" style="--color: #156982;">sign me in</button>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
