@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>title</title>
+    <script type="text/javascript" src="scripts/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="scripts/calculator.js"></script>
     <script type="text/javascript" src="scripts/overlay.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/theme_c.css"/>
     <link rel="stylesheet" href="css/calculator_c.css"/>
     <link rel="stylesheet" href="css/overlay_c.css"/>
@@ -21,70 +21,95 @@
         </div>
         <div id="dv_ttl">Electric Cables Cross Section Calculations</div>
         <div data-grow="grdy" class="bg-frm-1 align-cntnt-cntr">
-            <form class="cntrl-avn">
+            <form id="frm_calc" class="cntrl-avn">
                 <span id="sp_date">01.01.2000</span>
                 <div class="push-cntnt-apart" style="--drctn: row;">
                     <input id="Text1" type="text" placeholder="Customer" class="shrt-txt-box txt-box-prfl" />
                     <input id="Text2" type="text" placeholder="Facility Name" class="shrt-txt-box txt-box-prfl" />
                 </div>
                 <input id="Text3" type="text" placeholder="Remarks" class="long-txt-box txt-box-prfl" />
-                <ul id="ul_calc_inpt" class="list-group list-group-horizontal">
+                <div id="dv_calc_inpt" class="stck-cntnt-hrzntly">
                     <!--generate row-->
-                    <li id="li_gnrt_row" class="list-group-item align-cntnt-cntr txt-prfl-1">
-                        <span>+</span>
-                    </li>
+                    <div id="dv_gnrt_row" class="align-cntnt-cntr">+</div>
                     <!--description-->
-                    <li data-grow="grdy" class="list-group-item align-cntnt-cntr txt-prfl-1">
-                        <textarea id="TextArea1" cols="15" rows="1" placeholder="Description" class="txt-area-prfl color-1"></textarea>
-                    </li>
-                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <div data-grow="grdy" class="align-cntnt-vrtcly-cntr">
+                        <textarea id="ta_dscrptn" cols="15" rows="1" placeholder="Description" class="txt-area-prfl color-1"></textarea>
+                    </div>
+                    <div class="align-cntnt-cntr"><span class="vrtcl-sprtr-prfl"></span></div>
                     <!--power-->
-                    <li data-grow="grdy" class="list-group-item align-cntnt-cntr txt-prfl-1">
-                        <select id="Select1" class="slct-prfl color-1">
-                            <option>Power [Kw]</option>
-                            <option>15</option>
+                    <div data-grow="grdy" class="align-cntnt-cntr">
+                        <select id="se_pwr" class="slct-prfl color-1">
+                            <option value="Power [Kw]">Power [Kw]</option>
+                            <option value="15">15</option>
                         </select>
-                    </li>
-                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    </div>
+                    <div class="align-cntnt-cntr"><span class="vrtcl-sprtr-prfl"></span></div>
                     <!--cable-->
-                    <li id="li_cbl" data-grow="grdy" class="list-group-item align-cntnt-cntr txt-prfl-1">                        
+                    <div id="dv_cbl" data-grow="grdy" class="align-cntnt-cntr hrzntl-rd-grp" style="--mrgn: 0.7rem;">                        
                         <!--the purpose of the span container is to prevent from the radio tag to expand to the full width of its li ancestor tag due to its 'display:flex' definition-->
                         <span data-role="rd_btn" class="cntr-inpt-txt">
-                            <input id="Radio1" type="radio" name="cbl_grp" class="rdio-prfl" /><label data-role="rd_lbl">Al</label>
+                            <input id="Radio1" type="radio" name="cbl_grp" value="Al" class="rdio-prfl" /><label data-role="info_lbl">Al</label>
                         </span>
                         <span data-role="rd_btn" class="cntr-inpt-txt">
-                            <input id="Radio2" type="radio" name="cbl_grp" class="rdio-prfl" /><label data-role="rd_lbl">Cu</label>
+                            <input id="Radio2" type="radio" name="cbl_grp" value="Cu" class="rdio-prfl" /><label data-role="info_lbl">Cu</label>
                         </span>
-                    </li>
-                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    </div>
+                    <div class="align-cntnt-cntr"><span class="vrtcl-sprtr-prfl"></span></div>
                     <!--wire-->
-                    <li id="li_wire" data-grow="grdy" class="list-group-item align-cntnt-cntr txt-prfl-1">
+                    <div id="dv_wire" data-grow="grdy" class="align-cntnt-cntr hrzntl-rd-grp" style="--mrgn: 0.7rem;">
                         <span data-role="rd_btn" class="cntr-inpt-txt">
-                            <input id="Radio3" type="radio" name="wr_grp" class="rdio-prfl" /><label data-role="rd_lbl">3 Wire</label>
+                            <input id="Radio3" type="radio" name="wr_grp" value="3 Wire" class="rdio-prfl" /><label data-role="info_lbl">3 Wire</label>
                         </span>
                         <span data-role="rd_btn" class="cntr-inpt-txt">
-                            <input id="Radio4" type="radio" name="wr_grp" class="rdio-prfl" /><label data-role="rd_lbl">Single</label>
+                            <input id="Radio4" type="radio" name="wr_grp" value="Single" class="rdio-prfl" /><label data-role="info_lbl">Single</label>
                         </span>
-                    </li>
-                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    </div>
+                    <div class="align-cntnt-cntr"><span class="vrtcl-sprtr-prfl"></span></div>
                     <!--ampacity-->
-                    <li data-grow="grdy" class="list-group-item color-1 align-cntnt-cntr txt-prfl-1">Ampacity [A]</li>
-                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <div data-grow="grdy" class="color-1 align-cntnt-cntr">Ampacity [A]</div>
+                    <div class="align-cntnt-cntr"><span class="vrtcl-sprtr-prfl"></span></div>
                     <!--reserve-->
-                    <li data-grow="grdy" class="list-group-item color-2 align-cntnt-cntr txt-prfl-1">Reserve (%)</li>
-                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>
+                    <div data-grow="grdy" class="color-2 align-cntnt-cntr">Reserve (%)</div>
+                    <div class="align-cntnt-cntr"><span class="vrtcl-sprtr-prfl"></span></div>
                     <!--imax-->
-                    <li data-grow="grdy" class="list-group-item color-2 align-cntnt-cntr txt-prfl-1">Imax</li>
-                    <li class="list-group-item align-cntnt-cntr txt-prfl-1"><div class="vrtcl-sprtr-prfl"></div></li>               
+                    <div data-grow="grdy" class="color-2 align-cntnt-cntr">Imax</div>
+                    <div class="align-cntnt-cntr"><span class="vrtcl-sprtr-prfl"></span></div>
                     <!--mm2-->
-                    <li data-grow="grdy" class="list-group-item color-2 align-cntnt-cntr txt-prfl-1">S [mm^2]</li>
-                </ul>
+                    <div data-grow="grdy" class="color-2 align-cntnt-cntr">S [mm^2]</div>
+                </div>
                 <div class="push-cntnt-apart" style="--drctn: row;">
-                    <div id="dv_rst" onclick="rstCalc();">
+                    <div id="dv_rst" class="align-cntnt-cntr" onclick="rstCalc();">
                         <img src="assets/icons/reset.svg"/>
-                        <span>Reset</span>
+                        <span data-role="info_lbl">Reset</span>
                     </div>
                     <input id="btn_sbmt" type="submit" value="add row" onclick="return gnrtRow();" />
+                </div>
+                <table id="tbl_new_rows" border="0">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>Description</td>
+                            <td></td>
+                            <td>Power [Kw]</td>
+                            <td></td>
+                            <td>Al / Cu</td>
+                            <td></td>
+                            <td>3 Wire / Single</td>
+                            <td></td>
+                            <td>Ampacity [A]</td>
+                            <td></td>
+                            <td>Reserve (%)</td>
+                            <td></td>
+                            <td>Imax</td>
+                            <td></td>
+                            <td>S [mm^2]</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="align-cntnt-rght">
+                    <input id="btn_calc" type="submit" value="calculate" onclick="return calc();" />
                 </div>
             </form>
         </div>
@@ -111,8 +136,8 @@
                                                 <td>                                                
                                                     <!--the purpose of the span container is to prevent from the checkbox tag to expand to the full width of its td ancestor tag due to its 'display:flex' definition-->
                                                     <span class="cntr-inpt-txt">
-                                                        <input id="Checkbox1" type="checkbox" class="chckbx-prfl"/>
-                                                        <label data-role="cb_lbl">keep me logged in</label>
+                                                        <input id="cb_lgn" type="checkbox" class="chckbx-prfl"/>
+                                                        <label data-role="info_lbl">keep me logged in</label>
                                                     </span>
                                                 </td>
                                                 <td>
