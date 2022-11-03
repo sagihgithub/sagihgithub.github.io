@@ -96,17 +96,28 @@ function gnrtRow() {
             document.getElementById("btn_calc").style.cssText = "display: none;";
             //document.getElementById("dv_new_rows_frm").style.cssText = "display: none;";
         }
-            
+        else {
+            for (let i = 0; i < tBody.rows.length; i++) {
+                tBody.rows[i].cells[0].innerHTML = i + 1;
+            }
+        }
     };
     a.innerHTML = "X";
     cell = row.insertCell(16);
     cell.appendChild(a);
+
+    //reste fields
+    $('#dv_calc_inpt textarea').val('');
+    $('#se_pwr').val('Power [Kw]');
+    $('#dv_calc_inpt input[type=radio]').prop('checked', false);
+
     return false;
 }
 
 function rstCalc() {
     /*$('#dv_calc_inpt input[type=radio]').removeAttr('checked');*/
     $('#dv_calc_inpt textarea').val('');
+    $('#se_pwr').val('Power [Kw]');
     $('#dv_calc_inpt input[type=radio]').prop('checked', false);
     let tbl_new_rows = document.getElementById("tbl_new_rows");
     tbl_new_rows.style.cssText = "display: none;";
