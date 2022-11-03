@@ -13,31 +13,73 @@
     src: url('../assets/fonts/OpenSans-Condensed-Light.ttf');
 }
 
-.align-cntnt-cntr {
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: OpenSans-Regular;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+}
+
+.anchr-prfl {
+    color: var(--color);
+    text-decoration: var(--dcrtn);
+}
+
+.anchr-prfl:hover {
+    color: var(--color);
+    text-decoration: var(--dcrtn);
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: OpenSans-Regular;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    font-family: OpenSans-Regular;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-family: OpenSans-Regular;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    font-family: OpenSans-Regular;
+}
+
+.align-cntnt-vrtcly-cntr {
     display: flex;
     align-items: center;
-    justify-items: center;
+}
+
+.align-cntnt-hrzntly-cntr {
+    display: flex;
     justify-content: center;
 }
 
-/*.align-cntnt-sidewys {
+.align-cntnt-rght {
     display: flex;
-    justify-content: space-between;
-}*/
+    justify-content:right;
+}
+
+.align-cntnt-cntr {
+    display: flex;
+    align-items: center;
+    /*justify-items: center;*/
+    justify-content: center;
+}
 
 .push-cntnt-apart {
     display: flex;
     flex-direction: var(--drctn);
     justify-content: space-between;
 }
-
-/*[data-algn="push_aprt_hrzntly"] {
-    .push-cntnt-apart(row);
-}*/
-
-/*[data-algn="push_aprt_vrtcly"] {
-    .push-cntnt-apart(column);
-}*/
 
 [data-grow="grdy"] {
     flex-grow: 1;
@@ -46,17 +88,11 @@
 .stck-cntnt-hrzntly {
     display: flex;
     flex-direction: row;
-    /*& > [data-grow="grdy"] {
-        flex-grow: 1;
-    }*/
 }
 
 .stck-cntnt-vrtcly {
     display: flex;
     flex-direction: column;
-    /*& > [data-grow="grdy"] {
-        flex-grow: 1;
-    }*/
 }
 
 .cntr-inpt-txt {
@@ -78,10 +114,18 @@
     flex: none;
 }
 
-[data-role="rd_lbl"], [data-role="cb_lbl"] {
+/*[data-role="rd_lbl"], [data-role="cb_lbl"] {
     margin: 0 0 0 0.1rem;
+}*/
+
+[data-role="info_lbl"] {
+    margin-left: 0.2rem;
 }
 
-[data-role="rd_btn"]:not(:first-of-type) {
+/*[data-role="rd_btn"]:not(:first-of-type) {
     margin-left: 0.7rem;
+}*/
+
+.hrzntl-rd-grp > [data-role="rd_btn"]:not(:first-of-type) {
+    margin-left: var(--mrgn);
 }

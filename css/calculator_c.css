@@ -1,22 +1,10 @@
-﻿/*@import "theme_c.css";*/
-
-html, body {
-    height: 100%;
-    /*min-height: 100%;*/
-    margin: 0;
-}
-
+﻿
 .color-1 {
     color: #181818;
 }
 
 .color-2 {
     color: #828282;
-}
-
-.txt-prfl-1 {
-    letter-spacing: 0;
-    text-transform: capitalize;
 }
 
 .txt-box-prfl {
@@ -31,6 +19,7 @@ html, body {
     resize: none;
     border: none;
     outline: none;
+    overflow: hidden; 
     padding: 0;
 }
 
@@ -49,10 +38,15 @@ html, body {
     outline: none;
 }
 
-.anchr-prfl:hover {
+/*.anchr-prfl {
     text-decoration: none;
     color: inherit;
 }
+
+.anchr-prfl:hover {
+    text-decoration: none;
+    color: inherit;
+}*/
 
 .rdio-prfl {
     display: flex;
@@ -67,8 +61,6 @@ html, body {
     background-color: #C6C6C6;
     border-radius: 50%;
     cursor: pointer;
-    /*font-size: 1.8rem;*/
-
 }
 
 /*.rdio-prfl::before {
@@ -88,19 +80,7 @@ html, body {
     background-color: #156982;
 }
 
-
-
-/*.rd-grp-spcng span {
-    margin-left: 0.1rem;
-}
-
-.rd-grp-spcng span:not(:last-of-type) {
-    margin-right: 0.7rem;
-}*/
-
-
 .vwprt-hght-frm {
-    /*.stck-cntnt-vrtcly;*/
     min-height: 100%;
 }
 
@@ -109,17 +89,11 @@ html, body {
     margin: 0 auto;
 }
 
-/*#dv_hdr {
-    .cntrl-avn;
-    .push-cntnt-apart(row);
-}*/
-
 #im_logo {
     width: 15%;
 }
 
 #dv_opn_lgn {
-    /*.stck-cntnt-vrtcly;*/
     color: #828282;
     text-align: center;
     padding: 1rem 0;
@@ -137,12 +111,37 @@ html, body {
     font-size: 3rem;
     text-align: center;
     font-weight: 100;
+    font-family: OpenSans-Light;
 }
 
 .bg-frm-1 {
-    /*.align-cntnt-cntr;*/
     background-color: #F5F6FA;
     padding: 3rem 0;
+}
+
+#frm_calc {
+    font-size: 0.8rem;
+}
+
+
+#frm_calc ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+
+#frm_calc ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+
+#frm_calc :-moz-placeholder { /* Firefox 18- */
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+
+#frm_calc :-ms-input-placeholder { /* IE 10+ */
+    font-size: 0.8rem;
+    line-height: 0.8rem;
 }
 
 #sp_date {
@@ -151,70 +150,72 @@ html, body {
 }
 
 .shrt-txt-box {
-    /*.txt-box-prfl;*/
     width: 49%;
 }
 
 .long-txt-box {
-    /*.txt-box-prfl;*/
     width: 100%;
     margin: 2rem 0 3.5rem 0;
 }
 
 .vrtcl-sprtr-prfl {
-    height: 100%;
+    display:inline-block;
+    height: 70%;
     border-left: 2px solid #DBDBDB;
-    z-index: 1;
 }
 
-#ul_calc_inpt {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    font-family: OpenSans-Regular;
-    height: 5rem;
+
+#dv_calc_inpt {
+    height: 4.5rem;
     margin-bottom: 3rem;
+    /*font-size: 0.8rem;*/
     padding: 0;
 }
 
-#ul_calc_inpt li {
-    /*.align-cntnt-cntr;
-    .txt-prfl-1;*/
-    padding: 0.5rem 0.2rem;
+#dv_calc_inpt > div:not(#dv_gnrt_row) {
+    background-color: white;
 }
 
-#ul_calc_inpt li:not(:first-child) {
-    border-left: none;
+#dv_calc_inpt > div:first-child {
+    border-radius: 0.3rem 0 0 0.3rem;
 }
 
-#ul_calc_inpt li:not(:last-child) {
-    border-right: none;
+#dv_calc_inpt > div:last-child {
+    border-radius: 0 0.3rem 0.3rem 0;
 }
 
-#li_gnrt_row {
-    background: #C3C1C1 0% 0% no-repeat padding-box;
+#dv_calc_inpt > div:nth-child(2) {
+    padding: 0 0 0 0.5rem;
 }
 
-#li_gnrt_row span {
+#dv_gnrt_row {
+    background-color: #C3C1C1;
     color: #FFFFFF;
     font-family: OpenSans-Condensed-Light;
     font-size: 2rem;
-    padding: 0 0.5rem;
+    width:2.3rem;
 }
 
-
-#li_cbl {
-    /*.rd-grp-spcng;*/
+#dv_cbl {
     color: #181818;
 }
 
-#li_wire {
-    /*.rd-grp-spcng;*/
+#dv_wire {
     color: #181818;
 }
+
+
+
+
+
+
+
+
+
 
 #dv_rst {
-    /*.btn-prfl;*/
     color: #C5C3C3;
-    font-size: 0.8rem;
+    /*font-size: 0.8rem;*/
     padding: 0;
     cursor: pointer;
 }
@@ -224,13 +225,116 @@ html, body {
 }
 
 
-#btn_sbmt {
-    background: #828282 0% 0% no-repeat padding-box;
+#btn_sbmt,#btn_calc {
+    background-color: #828282;
     border: 0.05rem solid #888787;
+    outline:none;
     color: white;
     opacity: 1;
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
+}
+
+#btn_calc {
+    display:none;
+}
+
+/*#dv_new_rows_frm {
+    display: none;
+    width: 103%;
+}*/
+
+#tbl_new_rows {
+    display: none;
+    width: 103%;
+    border-collapse: collapse;
+    margin: 3rem 0 1rem 0;
+}
+
+#tbl_new_rows > thead td {
+    color: #828282;
+    padding-bottom:1rem;
+}
+
+/*#tbl_new_rows > tbody > tr:nth-child(n+1) {
+    height:4.5rem;
+}*/
+
+/*#tbl_new_rows > tbody > tr {
+    height: 4.5rem;
+}*/
+
+#tbl_new_rows > tbody > tr > td {
+    height: 4.5rem;
+    padding:0;
+    margin:0;
+}
+
+#tbl_new_rows > thead > tr > td:nth-child(2),
+#tbl_new_rows > tbody > tr > td:nth-child(2) {
+    width: 25%;
+}
+
+#tbl_new_rows > thead > tr > td:last-child,
+#tbl_new_rows > tbody > tr > td:last-child {
+    width: 3%;
+}
+
+#tbl_new_rows > tbody > tr > td:not(:last-child) {
+    background-color:white;
+}
+
+#tbl_new_rows > tbody > tr > td:nth-last-child(1),
+#tbl_new_rows > tbody > tr > td:nth-last-child(2),
+#tbl_new_rows > tbody > tr > td:nth-last-child(4),
+#tbl_new_rows > tbody > tr > td:nth-last-child(6) {
+    color: #828282;
+}
+
+#tbl_new_rows > tbody > tr:not(:last-child) > td:not(:last-child) {
+    border-bottom: 2px solid #F5F6FA;
+}
+
+#tbl_new_rows > tbody > tr > td:first-child {
+    background-color: #156982;
+    width: 2.3rem;
+    color: white;
+    font-family: OpenSans-Condensed-Light;
+    font-size: 1.2rem;
+}
+
+#tbl_new_rows > thead > tr > td:nth-child(2),
+#tbl_new_rows > tbody > tr > td:nth-child(2) {
+    padding: 0 0 0 0.5rem;
+}
+
+#tbl_new_rows > thead > tr > td:not(:nth-child(2)),
+#tbl_new_rows > tbody > tr > td:not(:nth-child(2)) {
+    text-align: center;
+}
+
+#tbl_new_rows > tbody > tr:nth-child(1) > td:first-child {
+    border-radius: 0.3rem 0 0 0;
+}
+
+#tbl_new_rows > tbody > tr:last-child > td:first-child {
+    border-radius: 0 0 0 0.3rem;
+}
+
+#tbl_new_rows > tbody > tr:only-child > td:first-child {
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+
+#tbl_new_rows > tbody > tr:nth-child(1) > td:nth-last-child(2) {
+    border-radius: 0 0.3rem 0 0;
+}
+
+#tbl_new_rows > tbody > tr:last-child > td:nth-last-child(2) {
+    border-radius: 0 0 0.3rem 0;
+}
+
+#tbl_new_rows > tbody > tr:only-child > td:nth-last-child(2) {
+    border-radius: 0 0.3rem 0.3rem 0;
 }
 
 #dv_ftr {

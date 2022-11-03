@@ -1,10 +1,4 @@
-﻿/*@import "theme_c.css";*/
-
-
-/*label {
-    margin: 0;
-}*/
-
+﻿
 .txt-box-prfl-ovrly {
     background-color: transparent;
     border: 1px solid var(--color);
@@ -50,41 +44,34 @@
     border: 1px solid white;
     background-color: transparent;
     cursor: pointer;
-    font-size: 1rem;
+    /*font-size: 0.9rem;*/
 
 
 }
 
-.chckbx-prfl:checked::before {
+/*.chckbx-prfl:checked::after {
     content: "\0413";
     color: white;
     transform: rotate(-135deg);
+}*/
+
+.chckbx-prfl:checked::before {
+    content: "";
+    height: 0.5rem;
+    width: 0.2rem;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(44deg);
 }
 
 
-.anchr-prfl {
-    color: var(--color);
-}
 
-.anchr-prfl:hover {
-    text-decoration: var(--dcrtn);
-}
-
-
-#btn_lgn {
-    /*.btn-prfl-ovrly(white);*/
+#btn_lgn, #btn_sgn {
     margin-top: 1.5rem;
 }
 
-#btn_sgn {
-    /*.btn-prfl-ovrly(#156982);*/
-    margin-top: 1.5rem;
-}
 
 #dv_ovrly {
-    /*align-items: center;
-    justify-content: center;*/
-    /*.align-cntnt-cntr;*/
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -123,6 +110,7 @@
 
 #tbl_id_data {
     height: 100%;
+    border-collapse:collapse;
 }
 
 .id-opt {
@@ -144,11 +132,7 @@
 #lgn_inpt {
     background-color: #156982;
     color: white;
-    /*input [type="text"]
 
-{
-    .txt-box-prfl-2(white);
-}*/
 
 }
 
@@ -156,11 +140,7 @@
 #sign_inpt {
     background-color: white;
     color: #156982;
-    /*input [type="text"]
 
-{
-    .txt-box-prfl-2(#156982);
-}*/
 
 }
 
@@ -174,16 +154,14 @@
 }
 
 #a_rst_psswrd {
-    /*.anchr-prfl(@color:white,@dcrtn:underline);*/
+    
     text-decoration: underline;
 }
 
 #tbl_lgn_optns {
     width: 100%;
     font-size: 0.8rem;
-    /*td{
-        vertical-align:middle;
-    }*/
+    
 }
 
 #tbl_lgn_optns td:first-of-type {
