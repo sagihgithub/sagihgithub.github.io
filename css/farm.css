@@ -1,0 +1,281 @@
+﻿@keyframes kenburns {
+    0% {
+        transform: scale(1);
+        transition: transform 20000ms linear 0s;
+    }
+
+    100% {
+        transform: scale(1.4);
+        transition: transform 20000ms linear 0s;
+    }
+}
+
+#carouselKenBurns .carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    transition: transform .6s ease-in-out 0s, opacity ease-in-out .6s;
+    opacity: 0.8;
+    animation: kenburns 20000ms linear 0s infinite alternate;
+}
+
+.kb-carousel {
+    overflow: hidden;
+}
+
+.nav-link {
+    color: white;
+}
+
+    /*, .nav-link > li > a:focus*/
+a.nav-link:hover {
+    color: #E0EECA;
+}
+
+.fixed-top {
+    background: linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(231,56,39,0));
+}
+
+.fixed-top.scrolled {
+    background: #EB5457 !important;
+    transition: background 200ms linear;
+}
+
+.inner-custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 10;
+}
+
+.inner-custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.outer-custom-shape-divider-top {
+    
+    overflow: hidden;
+    line-height: 0;
+    /*transform: rotate(180deg);*/
+}
+
+.outer-custom-shape-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.outer-custom-shape-divider-bottom {
+    overflow: hidden;
+    line-height: 0;
+}
+
+.outer-custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.fade-in-bottom {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.fade-in-bottom.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fade-in-top {
+    position: relative;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.fade-in-top.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/*.fade-in-top-b {
+    position: relative;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.fade-in-top-c {
+    position: relative;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 3s all ease;
+}*/
+
+/*.fade-in-top-c.active, .fade-in-top-b.active, .fade-in-top-a.active {
+    transform: translateY(0);
+    opacity: 1;
+}*/
+
+.flip-horizontal {
+    transform: scaleX(-1);
+}
+
+.flip-vertical {
+    transform: scaleY(-1);
+}
+
+/*.wavy-underline {
+    text-decoration: #007F0E wavy underline;
+    text-decoration-skip-ink: none;
+    height: 2em;
+}*/
+
+.center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*#reviewCarouselIndicators .carousel-indicators li {
+    background-color: #007F0E;
+}
+
+#reviewCarouselIndicators .carousel-indicators li.active {
+    background-color: #EB5457;
+}*/
+
+/*.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#007F0E' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#007F0E' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}*/
+
+.accordion .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+    .accordion .accordion-item button[aria-expanded=true] {
+        /*border-bottom: 1px solid #03b5d2;*/
+        border-bottom: 1px solid #E0EECA;
+    }
+
+.accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    /*color: #7288a2;*/
+    color: #007F0E;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+    .accordion button:hover, .accordion button:focus {
+        cursor: pointer;
+        /*color: #03b5d2;*/
+        color: #E0EECA;
+    }
+
+        .accordion button:hover::after, .accordion button:focus::after {
+            cursor: pointer;
+            /*color: #03b5d2;
+            border: 1px solid #03b5d2;*/
+            color: #E0EECA;
+            border: 1px solid #E0EECA;
+        }
+
+    .accordion button .accordion-title {
+        padding: 1em 1.5em 1em 0;
+    }
+
+    .accordion button .icon {
+        display: inline-block;
+        position: absolute;
+        /*top: 18px;*/
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        border: 1px solid;
+        border-radius: 22px;
+    }
+
+        .accordion button .icon::before {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 9px;
+            left: 5px;
+            width: 10px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .accordion button .icon::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+        }
+
+    .accordion button[aria-expanded=true] {
+        /*color: #03b5d2;*/
+        color: #E0EECA;
+    }
+
+        .accordion button[aria-expanded=true] .icon::after {
+            width: 0;
+        }
+
+        .accordion button[aria-expanded=true] + .accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+.accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+}
+
+    .accordion .accordion-content p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 2em 0;
+    }
+
+
+
+
+
