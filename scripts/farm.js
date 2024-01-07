@@ -1,8 +1,10 @@
-﻿//set main menu background on scroll
+
+//set main menu background on scroll
 $(function () {
     $(document).scroll(function () {
         var $nav = $(".fixed-top");
         $nav.toggleClass('scrolled top-shadow', $(this).scrollTop() > $nav.height());
+        //$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
 });
 //set main menu background on scroll
@@ -28,26 +30,10 @@ window.addEventListener("scroll", reveal);
 //fade-in
 
 //FAQ
-//const items = document.querySelectorAll(".accordion button");
-
-//function toggleAccordion() {    
-//    const itemToggle = this.getAttribute('aria-expanded');
-    
-//    for (i = 0; i < items.length; i++) {
-//        items[i].setAttribute('aria-expanded', 'false');
-//    }
-
-//    if (itemToggle == 'false') {
-//        this.setAttribute('aria-expanded', 'true');
-//    }
-//}
-
-//items.forEach(item => item.addEventListener('click', toggleAccordion));
-
 function toggleAccordion(elm) {
     let items = document.querySelectorAll(".accordion button");
     let itemToggle = elm.getAttribute('aria-expanded');
-    
+
     for (i = 0; i < items.length; i++) {
         items[i].setAttribute('aria-expanded', 'false');
     }
@@ -56,6 +42,4 @@ function toggleAccordion(elm) {
         elm.setAttribute('aria-expanded', 'true');
     }
 }
-
-
 //FAQ
