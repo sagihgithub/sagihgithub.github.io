@@ -3,8 +3,7 @@
 $(function () {
     $(document).scroll(function () {
         var $nav = $(".fixed-top");
-        $nav.toggleClass('scrolled top-shadow', $(this).scrollTop() > $nav.height());
-        //$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
 });
 //set main menu background on scroll
