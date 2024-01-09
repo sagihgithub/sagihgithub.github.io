@@ -124,7 +124,10 @@ a.nav-link:hover {
 }
 
 .accordion .accordion-item {
-    border-bottom: 1px solid #e5e5e5;
+    border: 2px solid #E0EECA;
+    margin-top: 10px;
+    border-radius: 0.25rem;
+    padding-right: 5px;
 }
 
     .accordion .accordion-item button[aria-expanded=true] {
