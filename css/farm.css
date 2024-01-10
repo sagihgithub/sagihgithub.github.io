@@ -124,10 +124,7 @@ a.nav-link:hover {
 }
 
 .accordion .accordion-item {
-    border: 2px solid #E0EECA;
-    margin-top: 10px;
-    border-radius: 0.25rem;
-    padding-right: 5px;
+    border: none;
 }
 
     .accordion .accordion-item button[aria-expanded=true] {
@@ -148,16 +145,10 @@ a.nav-link:hover {
     outline: none;
 }
 
-    .accordion button:hover, .accordion button:focus {
+    .accordion button:hover {
         cursor: pointer;
         color: #E0EECA;
     }
-
-        .accordion button:hover::after, .accordion button:focus::after {
-            cursor: pointer;
-            color: #E0EECA;
-            border: 1px solid #E0EECA;
-        }
 
     .accordion button .accordion-title {
         padding: 1em 1.5em 1em 0;
@@ -196,10 +187,6 @@ a.nav-link:hover {
             height: 10px;
             background: currentColor;
         }
-
-    .accordion button[aria-expanded=true] {
-        color: #E0EECA;
-    }
 
         .accordion button[aria-expanded=true] .icon::after {
             width: 0;
