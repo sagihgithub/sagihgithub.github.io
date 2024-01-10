@@ -127,6 +127,10 @@ a.nav-link:hover {
     border: none;
 }
 
+#faq p {
+    width:80%;
+}
+
     .accordion .accordion-item button[aria-expanded=true] {
         border-bottom: 1px solid #E0EECA;
     }
