@@ -1,0 +1,53 @@
+
+.nav-link {
+    color: white;
+}
+
+a.nav-link:hover {
+    color: #E0EECA;
+}
+
+.center-absolute-X {
+    position: absolute;    
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-absolute-Y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.flip-horizontal {
+    transform: scaleX(-1);
+}
+
+.flip-vertical {
+    transform: scaleY(-1);
+}
+
+.mb-gradient-background {
+    background: linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(231,56,39,0));
+}
+
+    .mb-gradient-background.scrolled {
+        background: #EB5457 !important;
+        transition: background 200ms linear;
+    }
+
+.mb-solid-background {
+    background: #EB5457 !important;
+}
+
+.outer-custom-shape-divider-top {
+    overflow: hidden;
+    line-height: 0;    
+}
+
+    .outer-custom-shape-divider-top svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 150px;
+    }
