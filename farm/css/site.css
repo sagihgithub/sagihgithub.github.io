@@ -45,9 +45,27 @@ a.nav-link:hover {
     line-height: 0;    
 }
 
-    .outer-custom-shape-divider-top svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 150px;
-    }
+.outer-custom-shape-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.cntr-cntnt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade-in-top {
+    /*position: relative;*/
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.fade-in-top.active {
+    transform: translateY(0);
+    opacity: 1;
+}
