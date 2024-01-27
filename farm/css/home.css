@@ -96,18 +96,6 @@ a.nav-link:hover {
         opacity: 1;
     }
 
-.fade-in-top {
-    position: relative;
-    transform: translateY(-100px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-
-    .fade-in-top.active {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
 .flip-horizontal {
     transform: scaleX(-1);
 }
