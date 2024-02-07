@@ -34,15 +34,6 @@ a.nav-link:hover {
     color: #E0EECA;
 }
 
-.fixed-top {
-    background: linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(231,56,39,0));
-}
-
-    .fixed-top.scrolled {
-        background: #EB5457 !important;
-        transition: background 200ms linear;
-    }
-
 .inner-custom-shape-divider-bottom {
     position: absolute;
     bottom: 0;
