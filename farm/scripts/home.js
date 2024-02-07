@@ -1,8 +1,11 @@
+$("#main-menu").addClass("fixed-top mb-gradient-background");
 
 //set main menu background on scroll
 $(function () {
     $(document).scroll(function () {
-        var $nav = $(".fixed-top");
+        //var $nav = $(".fixed-top");
+        var $nav = $("#main-menu");
+        //$nav.toggleClass('scrolled top-shadow', $(this).scrollTop() > $nav.height());
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
 });
