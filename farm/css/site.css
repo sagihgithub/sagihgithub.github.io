@@ -31,14 +31,21 @@ a.nav-link:hover {
     background: linear-gradient(180deg,rgba(0,0,0,.7) 0,rgba(231,56,39,0));
 }
 
-    .mb-gradient-background.scrolled {
-        background: #EB5457 !important;
+    .mb-gradient-background.scrolled {        
+        background: white !important;
+        border-bottom: 1px solid rgba(80,80,80,.1);
         transition: background 200ms linear;
     }
 
+   
 .mb-solid-background {
-    background: #EB5457 !important;
+    background: white !important;
 }
+
+    .mb-gradient-background.scrolled .nav-link,
+    .mb-solid-background .nav-link {
+        color: #EB5457 !important;
+    }
 
 .outer-custom-shape-divider-top {
     overflow: hidden;
