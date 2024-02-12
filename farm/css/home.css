@@ -124,9 +124,7 @@
 }
 
 
-.accordion .accordion-item {
-    border-bottom: 1px solid #e5e5e5;
-}
+
 
     .accordion .accordion-item button[aria-expanded=true] {
         /*border-bottom: 1px solid #03b5d2;*/
