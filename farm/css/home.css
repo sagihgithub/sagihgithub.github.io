@@ -19,7 +19,7 @@
     -o-background-size: cover;
     background-size: cover;
     transition: transform .6s ease-in-out 0s, opacity ease-in-out .6s;
-    opacity: 0.8;
+    
     animation: kenburns 20000ms linear 0s infinite alternate;
 }
 
