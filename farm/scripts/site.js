@@ -1,4 +1,16 @@
-﻿function reveal() {
+//set main menu background on scroll
+$(function () {
+    $(document).scroll(function () {
+        //var $nav = $(".fixed-top");
+        var $nav = $("#main-menu");
+        //$nav.toggleClass('scrolled top-shadow', $(this).scrollTop() > $nav.height());
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+});
+//set main menu background on scroll
+
+//fade-in
+function reveal() {
     var reveals = document.querySelectorAll(".fade-in-bottom, .fade-in-top");
 
     for (var i = 0; i < reveals.length; i++) {
@@ -14,5 +26,5 @@
     }
 }
 
-
 window.addEventListener("scroll", reveal);
+//fade-in
