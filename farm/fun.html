@@ -6,9 +6,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="css/fun.css" />
     <link rel="stylesheet" href="css/tickets.css" />
+                   
     <script type="text/javascript" src="scripts/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
@@ -340,12 +342,101 @@
       </div>
   
   </section>
-  <button type="button" class="btn shadow-none" style="position:fixed; background-color:#EB5457; border-radius:0 50rem 50rem 0; left:0; bottom:15%; color:white; padding:0 80px; z-index:998;"><h3>רכישת כרטיסים</h3><h6>לפעילויות בחווה</h6></button>
+  <button id="btn_toggleOvrlay" type="button" class="btn shadow-none" style="position:fixed; background-color:#EB5457; border-radius:0 50rem 50rem 0; left:0; bottom:15%; color:white; padding:0 80px; z-index:998;"><h3>רכישת כרטיסים</h3><h6>לפעילויות בחווה</h6></button>
 
   
     <section style="background-color:#007F0E; color:white; text-align:center; font-weight:bold; padding:10px 0;">קרדיטים</section>
+
+    <div class="ovrly-lyr " style="display:none;">
+        
+        <div class="cntr-cntnt" style="position:relative; width:100%; height:100%; min-width:700px;">
+            <div style="position:absolute; top:20px; right: 20px;">
+                <i class="fa fa-times fa-4x pointer" aria-hidden="true" onclick="closeOverlay()" style="color:white;"></i>
+            </div>
+            <div style="width:60%; min-width:700px;">
+                
+                <form method="post" action="/Tickets" > 
+                    
+                    <div style="padding:15% 10%; background-image: url('images/tickets/ver-03.png'); background-size:contain; background-repeat: no-repeat; background-position:center center; box-sizing:border-box;">
+                        
+                        <div style="display:flex;">
+                            
+                            <div style="display:grid; grid-template-rows: repeat(7, auto); grid-template-columns: repeat(2, 1fr); grid-gap: 1rem; width:80%;">
+                                <input type="text" placeholder="שם משפחה" class="form-control"><input type="text" placeholder="שם פרטי" class="form-control">
+                
+                                <input type="text" placeholder="מייל" class="form-control" style="grid-column: 1 / span 2;">
+                                <input type="text" placeholder="וידוא מייל" class="form-control" style="grid-column: 1 / span 2;">
+                                <input type="text" placeholder="טלפון" class="form-control" style="grid-column: 1 / span 2;">
+                
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary shadow-none" for="btnradio1">10:00-13:00</label>
+                
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-primary shadow-none" for="btnradio2">13:00-16:00</label>
+                                </div>
+                                <div class='input-group date' data-role="fixed-datepicker">
+                                    <input type='text' placeholder="בחר תאריך" class="form-control" />
+                                    <span class="input-group-append">
+                                        <span class="input-group-text bg-light d-block">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                
+                                <div style="text-align:center; color:white; font-weight:500; font-size:1.5rem;">
+                                    <span>סה"כ לתשלום:</span>
+                                    <span>40</span>
+                                </div>
+                                <div id="dv_ticketsVol" class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" disabled="disabled" class="btn btn-danger btn-number shadow-none" data-type="minus" data-field="quant[2]">
+                
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                
+                                        </button>
+                                    </span>
+                                    <input type="text" name="quant[2]" class="form-control input-number shadow-none" value="1" min="1" max="10">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-success btn-number shadow-none" data-type="plus" data-field="quant[2]">
+                
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                
+                                <div style="grid-column: 1 / span 2;">
+                                    <button type="button" class="btn shadow-none" style="background-color:#EB5457; border-radius:0.5rem; color:white; padding:0; width:100%;"><h4>רכישת כרטיסים</h4></button>
+                                </div>
+                            </div>
+                
+                
+                            <div style="flex:1; background-image: url('images/tickets/barcode-03.png'); background-size:contain; background-repeat: no-repeat; background-position:center right;">
+                
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </form>
+                
+                
+                
+                
+    
+            </div>
+        </div>
+        
+        
+    </div>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="scripts/site.js"></script>
-    <script type="text/javascript" src="scripts/tickets.js"></script>
+    <script type="text/javascript" src="scripts/tickets.js"></script>                    
+    <script type="text/javascript" src="/scripts/tickets.js"></script>
     
 </body>
 </html>
