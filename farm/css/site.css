@@ -11,6 +11,10 @@ input[type="text"]::placeholder {
     width: 80% !important;
 }*/
 
+.fixed-top{
+    z-index:990;
+}
+
 #main-menu .nav-link {
     color: white;
     /*color: #EB5457 !important;*/
