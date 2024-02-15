@@ -11,6 +11,10 @@ input[type="text"]::placeholder {
     width: 80% !important;
 }*/
 
+.form-control {
+    box-shadow: none !important;
+}
+
 .fixed-top{
     z-index:990;
 }
