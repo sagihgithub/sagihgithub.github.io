@@ -1,4 +1,4 @@
-﻿//$("#datepicker").datepicker({
+//$("#datepicker").datepicker({
 //    beforeShowDay: function (date) {
 //        var day = date.getDay();
 //        return [(day != 1 && day != 0 && day != 6)];
@@ -93,6 +93,8 @@ $('.btn-number').on("click", function (e) {
 
             }
 
+            $('#sp_total').text(parseInt($('#sp_total').text()) - 40);
+
         } else if (type == 'plus') {
             
             if (currentVal < input.attr('max')) {
@@ -110,6 +112,8 @@ $('.btn-number').on("click", function (e) {
                 $('#dv_ticketsVol [data-type=minus]').attr('disabled', false);
                 
             }
+            
+            $('#sp_total').text(parseInt($('#sp_total').text()) + 40);
         }
     } else {
         input.val(0);
