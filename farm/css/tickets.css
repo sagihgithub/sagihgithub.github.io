@@ -1,4 +1,4 @@
-﻿/*.fixed-datepicker {
+/*.fixed-datepicker {
     position: relative;
 }*/
 
@@ -96,12 +96,40 @@
     -moz-appearance: textfield;
     -webkit-appearance: none;
 }*/
+
+::placeholder {
+    opacity: 0.3 !important; /* Firefox */
+}
+
+.form-control, .form-control::placeholder {
+    color: #007F0E !important;
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #007F0E;
+}
+
+.btn-outline-primary, .btn-check:checked + .btn-outline-primary {
+    /*color: #E0EECA;*/
+    color: #007F0E;
+}
+
 [data-type="minus"] {
     border-radius: 0.25rem 0 0 0.25rem;
+    /*color: white;*/
+    color: #007F0E;
+    background-color: #E0EECA;
 }
 
 [data-type="plus"] {
     border-radius: 0 0.25rem 0.25rem 0;
+    /*color: white;*/
+    color: #007F0E;
+    background-color: #E0EECA;
+}
+
+.fa-calendar {
+    color: #007F0E;
 }
 
 
