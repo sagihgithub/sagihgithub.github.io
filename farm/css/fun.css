@@ -15,7 +15,7 @@
     height: 0;
     top: 0;
     left: 0;
-    border-top: 4rem solid white;
+    border-top: 4rem solid #FBCC62;
     border-right: 4rem solid transparent;
     border-radius:1rem;
 }
@@ -25,7 +25,7 @@
     height: 0;
     top: 0;
     right: 0;
-    border-top: 4rem solid white;
+    border-top: 4rem solid #FBCC62;
     border-left: 4rem solid transparent;
     border-radius: 1rem;
 }
@@ -35,7 +35,7 @@
     height: 0;
     bottom: 0;
     right: 0;
-    border-bottom: 4rem solid white;
+    border-bottom: 4rem solid #FBCC62;
     border-left: 4rem solid transparent;
     border-radius: 1rem;
 }
@@ -45,51 +45,10 @@
     height: 0;
     bottom: 0;
     left: 0;
-    border-bottom: 4rem solid white;
+    border-bottom: 4rem solid #FBCC62;
     border-right: 4rem solid transparent;
     border-radius: 1rem;
 }
-
-.triangle-tlg {
-    width: 0;
-    height: 0;
-    top: 0;
-    left: 0;
-    border-top: 4rem solid #E0EECA;
-    border-right: 4rem solid transparent;
-    border-radius: 1rem;
-}
-
-.triangle-trg {
-    width: 0;
-    height: 0;
-    top: 0;
-    right: 0;
-    border-top: 4rem solid #E0EECA;
-    border-left: 4rem solid transparent;
-    border-radius: 1rem;
-}
-
-.triangle-brg {
-    width: 0;
-    height: 0;
-    bottom: 0;
-    right: 0;
-    border-bottom: 4rem solid #E0EECA;
-    border-left: 4rem solid transparent;
-    border-radius: 1rem;
-}
-
-.triangle-blg {
-    width: 0;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    border-bottom: 4rem solid #E0EECA;
-    border-right: 4rem solid transparent;
-    border-radius: 1rem;
-}
-
 
 
 .scroll {
@@ -103,11 +62,6 @@
     animation: down 1.5s infinite;
     -webkit-animation: down 1.5s infinite;
 }
-
-   
-
-
-
 
 @keyframes down {
     0% {
