@@ -112,6 +112,10 @@ a.nav-link:hover {
     transition: 1s all ease;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .fade-in-top.active {
     transform: translateY(0);
     opacity: 1;
