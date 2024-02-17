@@ -357,16 +357,14 @@
                 
                 <form method="post" action="/Tickets" > 
                     
-                    <div style="padding:15% 10%; background-image: url('images/tickets/ver-03.png'); background-size:contain; background-repeat: no-repeat; background-position:center center; box-sizing:border-box;">
-                        
-                        <div style="display:flex;">
-                            
-                            <div style="display:grid; grid-template-rows: repeat(7, auto); grid-template-columns: repeat(2, 1fr); grid-gap: 1rem; width:80%;">
-                                <input type="text" placeholder="שם משפחה" class="form-control"><input type="text" placeholder="שם פרטי" class="form-control">
+                    <div style="display:flex; align-items:center; padding:0; background-image: url('images/tickets/rip-ticket.png'); background-size:contain; background-repeat: no-repeat; background-position:center center; box-sizing:border-box; aspect-ratio: 2 / 1;">
+
+                            <div style="display:grid; grid-template-rows: repeat(7, auto); grid-template-columns: repeat(2, 1fr); grid-gap: 1rem; width:70%; padding:40px; ">
+                                <input type="text" placeholder="שם משפחה" class="form-control shadow-none"><input type="text" placeholder="שם פרטי" class="form-control shadow-none">
                 
-                                <input type="text" placeholder="מייל" class="form-control" style="grid-column: 1 / span 2;">
-                                <input type="text" placeholder="וידוא מייל" class="form-control" style="grid-column: 1 / span 2;">
-                                <input type="text" placeholder="טלפון" class="form-control" style="grid-column: 1 / span 2;">
+                                <input type="text" placeholder="מייל" class="form-control shadow-none" style="grid-column: 1 / span 2;">
+                                <input type="text" placeholder="וידוא מייל" class="form-control shadow-none" style="grid-column: 1 / span 2;">
+                                <input type="text" placeholder="טלפון" class="form-control shadow-none" style="grid-column: 1 / span 2;">
                 
                                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
@@ -376,44 +374,54 @@
                                     <label class="btn btn-outline-primary shadow-none" for="btnradio2">13:00-16:00</label>
                                 </div>
                                 <div class='input-group date' data-role="fixed-datepicker">
-                                    <input type='text' placeholder="בחר תאריך" class="form-control" />
+                                    <input type='text' placeholder="בחר תאריך" class="form-control shadow-none" />
                                     <span class="input-group-append">
                                         <span class="input-group-text bg-light d-block">
                                             <i class="fa fa-calendar"></i>
                                         </span>
                                     </span>
                                 </div>
+                
                                 
-                                <div style="text-align:center; color:white; font-weight:500; font-size:1.5rem;">
-                                    <span>סה"כ לתשלום:</span>
-                                    <span>40</span>
-                                </div>
                                 <div id="dv_ticketsVol" class="input-group">
                                     <span class="input-group-btn">
-                                        <button type="button" disabled="disabled" class="btn btn-danger btn-number shadow-none" data-type="minus" data-field="quant[2]">
+                                        <button type="button" disabled="disabled" class="btn  btn-number shadow-none" data-type="minus" data-field="quant[2]">
                 
                                             <i class="fa fa-minus" aria-hidden="true"></i>
                 
                                         </button>
                                     </span>
-                                    <input type="text" name="quant[2]" class="form-control input-number shadow-none" value="1" min="1" max="10">
+                                    <input type="text" name="quant[2]" class="form-control input-number shadow-none" value="1" min="1" max="10" style="text-align:center;">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-success btn-number shadow-none" data-type="plus" data-field="quant[2]">
+                                        <button type="button" class="btn  btn-number shadow-none" data-type="plus" data-field="quant[2]">
                 
                                             <i class="fa fa-plus" aria-hidden="true"></i>
                                         </button>
                                     </span>
                                 </div>
-                                
-                                <div style="grid-column: 1 / span 2;">
-                                    <button type="button" class="btn shadow-none" style="background-color:#EB5457; border-radius:0.5rem; color:white; padding:0; width:100%;"><h4>רכישת כרטיסים</h4></button>
-                                </div>
-                            </div>                            
-                            <div style="flex:1; background-image: url('images/tickets/barcode-03.png'); background-size:contain; background-repeat: no-repeat; background-position:center right;">
                 
-                            </div>                                                        
-                        </div>                                                
-                    </div>                    
+                                <div dir="rtl" style="text-align:center; color:white; font-weight:500; font-size:1.5rem;">
+                                    <span>בחר כמות:</span>
+                                </div>
+                
+                                <div style="grid-column: 1 / span 2;">
+                                    <button type="button" class="btn shadow-none" style="background-color:#EB5457; border-radius:0.5rem; color:white; padding:0; width:100%;"><h4>רכישה</h4></button>
+                                </div>
+                            </div>
+                
+                
+                        <div class="cntr-cntnt" style="flex:1;">
+                                <div style="background-color:white; padding:5px; border-radius:0.5rem;">
+                                    <div dir="rtl" style="text-align:center; color:#FBCC62; font-weight:500; font-size:2rem;  border:2px solid #FBCC62; color:#007F0E; border-radius:0.5rem;">
+                                        <span>סה"כ<br />לתשלום:</span><br />
+                                        <span id="sp_total">40</span>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                    </div>
+
                 </form>                                                                            
             </div>
         </div>            
