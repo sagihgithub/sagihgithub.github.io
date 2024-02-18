@@ -93,7 +93,7 @@ $('.btn-number').on("click", function (e) {
 
             }
 
-            $('#sp_total').text(parseInt($('#sp_total').text()) - 40);
+            $('#total').text(parseInt($('#total').text()) - 40);
 
         } else if (type == 'plus') {
             
@@ -113,7 +113,7 @@ $('.btn-number').on("click", function (e) {
                 
             }
             
-            $('#sp_total').text(parseInt($('#sp_total').text()) + 40);
+            $('#total').text(parseInt($('#total').text()) + 40);
         }
     } else {
         input.val(0);
