@@ -18,29 +18,25 @@
     <title></title>
 </head>
 <body>
-    <section style="position:relative;">
-        
-        <div id="header" class="fixed-top " style="display:flex; flex-direction:row;  z-index:998; align-items:center;">        
-            <nav id="landscape_menu" style="flex-grow:1; padding-right: 30px;">
-                <ul dir="rtl" style="display:flex; list-style:none; padding:0; margin:0; justify-content: space-between; width:100%;">
-                    <li class="nav-item"><a href="Home" class="nav-link"><h5>ראשי</h5></a></li>
-                    <li class="nav-item"><a href="Fun" class="nav-link"><h5>כיף בחווה</h5></a></li>
-                    <li class="nav-item"><a href="." class="nav-link"><h5>כתבו עלינו</h5></a></li>
-                    <li class="nav-item"><a href="." class="nav-link"><h5>צור קשר</h5></a></li>
-                </ul>
-            </nav>        
-            <div id="portrait_menu" style="flex-grow:1;" >
-                <i class="fa fa-bars fa-4x portrait-menu-icon" aria-hidden="true" onclick="showDrawerMenu()"></i>
-                <!--
-                <input type="checkbox" id="btnShowDrawerMenu" />
-                <label for="btnShowDrawerMenu"><i class="fa fa-bars fa-4x portrait-menu-icon" aria-hidden="true"></i></label>
-                -->
-                
-            </div>
-            <img id="logo" src="images/layout/small-logo.png" style=" width:200px;">
+    <div id="header" class="fixed-top " style="display:flex; flex-direction:row;  z-index:998; align-items:center;">        
+        <nav id="landscape_menu" style="flex-grow:1; padding-right: 30px;">
+            <ul dir="rtl" style="display:flex; list-style:none; padding:0; margin:0; justify-content: space-between; width:100%;">
+                <li class="nav-item"><a href="Home" class="nav-link"><h5>ראשי</h5></a></li>
+                <li class="nav-item"><a href="Fun" class="nav-link"><h5>כיף בחווה</h5></a></li>
+                <li class="nav-item"><a href="." class="nav-link"><h5>כתבו עלינו</h5></a></li>
+                <li class="nav-item"><a href="." class="nav-link"><h5>צור קשר</h5></a></li>
+            </ul>
+        </nav>        
+        <div id="portrait_menu" style="flex-grow:1;" >
+            <i class="fa fa-bars fa-4x portrait-menu-icon" aria-hidden="true" onclick="showDrawerMenu()"></i>
+            <!--
+            <input type="checkbox" id="btnShowDrawerMenu" />
+            <label for="btnShowDrawerMenu"><i class="fa fa-bars fa-4x portrait-menu-icon" aria-hidden="true"></i></label>
+            -->
+            
         </div>
-        
-    </section>
+        <img id="logo" src="images/layout/small-logo.png" style=" width:200px;">
+    </div>
 
 
     <section style="position:relative;">
@@ -343,8 +339,9 @@
     <button id="btn_toggleOvrlay" type="button" class="btn shadow-none" style="position:fixed; background-color:#EB5457; border-radius:0 50rem 50rem 0; left:0; bottom:15%; color:white; padding:0 80px; z-index:998;"><h3>רכישת כרטיסים</h3><h6>לפעילויות בחווה</h6></button>
 
   
-    <section style="background-color:#007F0E; color:white; text-align:center; font-weight:bold; padding:10px 0;">קרדיטים</section>
-
+    <div style="background-color:#007F0E; color:white; text-align:center; font-weight:bold; padding:10px 0;">
+        קרדיטים
+    </div>
     <div class="drawer-menu">
         <div dir="rtl" style="padding:1rem 0;">
             <i class="fa fa-times fa-2x pointer" aria-hidden="true" onclick="hideDrawerMenu()" style="color:#EB5457;"></i>
