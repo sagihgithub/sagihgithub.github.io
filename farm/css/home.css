@@ -4,7 +4,7 @@
     }
 
     .review-bg-img {
-        background-image: url('images/home/bubble-01.png');
+        background-image: url('../images/home/bubble-01.png');
     }
 
     .review-width{
@@ -31,7 +31,7 @@
     }
 
     .review-bg-img {
-        background-image: url('images/home/bubble-02.png');
+        background-image: url('../images/home/bubble-02.png');
     }
 
     .review-width {
