@@ -1,10 +1,8 @@
 //set main menu background on scroll
 $(function () {
-    $(document).scroll(function () {
-        //var $nav = $(".fixed-top");
-        var $nav = $("#main-menu");
-        //$nav.toggleClass('scrolled top-shadow', $(this).scrollTop() > $nav.height());
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    $(document).on("scroll", function () {
+        
+        $("#header, #header h5, .portrait-menu-icon").toggleClass('scrolled', $(this).scrollTop() > $("#header").height());
     });
 });
 //set main menu background on scroll
@@ -28,3 +26,21 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 //fade-in
+
+function togglePortraitMenu(e) {
+    
+    if ($('#portrait_menu nav').css('display') == 'none') {        
+        $("#portrait_menu nav").css({ "display": "block" });        
+    }
+    else {        
+        $("#portrait_menu nav").css({ "display": "none" });        
+    }    
+}
+
+function showDrawerMenu() {
+    $('.drawer-menu').removeClass('hide-drawer-menu').addClass('show-drawer-menu');
+}
+
+function hideDrawerMenu() {
+    $('.drawer-menu').removeClass('show-drawer-menu').addClass('hide-drawer-menu');
+}
