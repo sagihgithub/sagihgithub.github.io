@@ -1,8 +1,4 @@
 
-
-
-
-
 .triangle {
     position: absolute;
     width: 0;
@@ -17,7 +13,7 @@
     left: 0;
     border-top: 4rem solid #FBCC62;
     border-right: 4rem solid transparent;
-    border-radius:1rem;
+    border-radius: 1rem;
 }
 
 .triangle-tr {
@@ -50,15 +46,12 @@
     border-radius: 1rem;
 }
 
-
 .scroll {
     width: 30px;
     height: 30px;
     bottom: 20%;
     left: 50%;
     position: absolute;
-    /*background-color: white;*/
-    /*transform: translate(-50%, 0) rotate(-45deg);*/
     animation: down 1.5s infinite;
     -webkit-animation: down 1.5s infinite;
 }
@@ -66,34 +59,28 @@
 @keyframes down {
     0% {
         transform: translate(0);
-        
     }
 
     20% {
         transform: translateY(15px);
-       
     }
 
     40% {
         transform: translate(0);
-        
     }
 }
 
 @-webkit-keyframes down {
     0% {
         transform: translate(0);
-        
     }
 
     20% {
         transform: translateY(15px);
-        
     }
 
     40% {
         transform: translate(0);
-        
     }
 }
 
