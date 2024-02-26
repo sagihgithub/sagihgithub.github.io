@@ -20,333 +20,365 @@
 <body>
     <section style="position:relative;">
         
-        <div id="main-menu" class="fixed-top mb-gradient-background" style="display:flex; flex-direction:row; padding:10px 40px">
-            <nav style="display:flex; flex-direction:row; align-items: center; width:80%; ">
-                <ul style="display:flex; flex-direction:row; list-style:none; padding:0; margin:0; justify-content: space-between; flex:1">
-                    <li class="nav-item"><a href="." class="nav-link"><h5>צור קשר</h5></a></li>
+        <div id="header" class="fixed-top " style="display:flex; flex-direction:row;  z-index:998; align-items:center;">        
+            <nav id="landscape_menu" style="flex-grow:1; padding-right: 30px;">
+                <ul dir="rtl" style="display:flex; list-style:none; padding:0; margin:0; justify-content: space-between; width:100%;">
+                    <li class="nav-item"><a href="Home" class="nav-link"><h5>ראשי</h5></a></li>
+                    <li class="nav-item"><a href="Fun" class="nav-link"><h5>כיף בחווה</h5></a></li>
                     <li class="nav-item"><a href="." class="nav-link"><h5>כתבו עלינו</h5></a></li>
-                    <li class="nav-item"><a href="." class="nav-link"><h5>המוצרים שלנו</h5></a></li>
-                    
-                    <li class="nav-item"><a href="fun.html" class="nav-link"><h5>כיף בחווה</h5></a></li>
-                    <li class="nav-item"><a href="home.html" class="nav-link"><h5>ראשי</h5></a></li>
+                    <li class="nav-item"><a href="." class="nav-link"><h5>צור קשר</h5></a></li>
                 </ul>
-            </nav>
-            <div style="flex:1;"></div>
-            <picture style="width:15%; ">
-                <img src="images/layout/logo-02.png" style="width:100%;">
-            </picture>
+            </nav>        
+            <div id="portrait_menu" style="flex-grow:1;" >
+                <i class="fa fa-bars fa-4x portrait-menu-icon" aria-hidden="true" onclick="showDrawerMenu()"></i>
+                <!--
+                <input type="checkbox" id="btnShowDrawerMenu" />
+                <label for="btnShowDrawerMenu"><i class="fa fa-bars fa-4x portrait-menu-icon" aria-hidden="true"></i></label>
+                -->
+                
+            </div>
+            <img id="logo" src="images/layout/small-logo.png" style=" width:200px;">
         </div>
         
     </section>
 
 
-
     <section style="position:relative;">
-      
-      <div style="display:flex; height:100vh; min-height:350px; background: url('images/fun/header.jpg') no-repeat center center; background-size:cover;">
-          
-          <h1 dir="rtl" style="align-self:center; margin: 0 auto; text-align:center; color:white; ">
-              בואו להנות בחווה<br />
-              בשפע של פעילויות<br />
-              והכל בכרטיס אחד !
-          </h1>
-          <div class="scroll" style="align-self:center; z-index:11;">
-              <div style="width:100%; height:100%; border-left: 5px solid white; border-bottom: 5px solid white; transform: rotate(-45deg);"></div>
-          </div>
-      </div>
-  
-      
-  
-      <div class="inner-custom-shape-divider-bottom">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-              <path fill="#E0EECA" fill-opacity="1" d="M0,64L40,58.7C80,53,160,43,240,69.3C320,96,400,160,480,192C560,224,640,224,720,213.3C800,203,880,181,960,149.3C1040,117,1120,75,1200,85.3C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
-          </svg>
-          
-      </div>
-  </section>
-  <section style="position:relative; background:#E0EECA; ">
-      
-      <div style="display:flex; flex-direction:row; padding: 3%;">
-          <div style="width:60%; position:relative; padding:5px;">
-              
-              
-              <div id="carouselExampleIndicators-01" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner" >
-                      <div class="carousel-item active" data-bs-interval="3000">
-                          <img src="images/activities/slide-01/01.jpg" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="3000">
-                          <img src="images/activities/slide-01/02.jpg" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="3000">
-                          <img src="images/activities/slide-01/03.jpg" class="d-block w-100">
-                      </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                  </button>
-              </div>
-  
-              <div class="triangle triangle-tl"></div>
-              <div class="triangle triangle-tr"></div>
-              <div class="triangle triangle-br"></div>
-              <div class="triangle triangle-bl"></div>
-              
-          </div>
-          
-          <div dir="rtl" style="position:relative; flex:1;">
-              <table style="position:relative; z-index:3; font-weight:500; color:#007F0E;">
-                  <tr>
-                      <td colspan="3">
-                          <div style="text-align:right;">
-                              <h2>קטיף עגבניות שרי</h2>
-                              <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 100" style="margin-bottom:10px;">
-                                  <path fill='transparent' stroke='#007F0E' stroke-width="10" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
-                              </svg>
-                          </div>
-                      </td>
-                  </tr>
-  
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fa fa-child fa-lg"></i><span style="margin:0 5px;">גילאים: </span></td>
-                      <td></td>
-                      <td>3 - 99</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i><span style="margin:0 5px;">משך: </span></td>
-                      <td></td>
-                      <td>שעה +</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fa fa-cog" aria-hidden="true"></i><span style="margin:0 5px;">ציוד:</span></td>
-                      <td></td>
-                      <td>ביגוד ונעליים נוחים</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      
-                      <td style="white-space: nowrap;"><i class="fas fa-tasks" aria-hidden="true"></i><span style="margin:0 5px;">פעילות:</span></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>סיור טעימות בחממת עגבניות השרי</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>קטיף עצמי ומארז שרי לכל משתתף</td>
-                  </tr>
-              </table>
-              <picture style="position:absolute; bottom:0; left:10px; width:40%; z-index:2;">
-                  <img src="images/activities/cherry-tomato-pile-03.png" style="width:100%;">
-              </picture>
-          </div>
-      </div>
-      
-  </section>
-  <section style="position:relative; background:white; ">
-  
-      <div class="outer-custom-shape-divider-top flip-vertical" style="position:relative; z-index:2;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-              <path fill="#E0EECA" fill-opacity="1" d="M0,64L40,58.7C80,53,160,43,240,69.3C320,96,400,160,480,192C560,224,640,224,720,213.3C800,203,880,181,960,149.3C1040,117,1120,75,1200,85.3C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
-          </svg>
-      </div>
-  
-      <div style="display:flex; flex-direction:row; padding: 3%;">
-          <div dir="rtl" style="position:relative; flex:1; padding-right:3%;">
-              <table style="position:relative; z-index:3; font-weight:500; color:#007F0E;">
-                  <tr>
-                      <td colspan="3">
-                          <div style="text-align:right;">
-                              <h2>הרפתקאות בטבע</h2>
-                              <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 100" style="margin-bottom:10px;">
-                                  <path fill='transparent' stroke='#007F0E' stroke-width="10" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
-                              </svg>
-                          </div>
-                      </td>
-                  </tr>
-  
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fa fa-child fa-lg"></i><span style="margin:0 5px;">גילאים: </span></td>
-                      <td></td>
-                      <td>3 - 99</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i><span style="margin:0 5px;">משך: </span></td>
-                      <td></td>
-                      <td>שעה +</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fa fa-cog" aria-hidden="true"></i><span style="margin:0 5px;">ציוד:</span></td>
-                      <td></td>
-                      <td>ביגוד ונעליים נוחים</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fas fa-tasks" aria-hidden="true"></i><span style="margin:0 5px;">פעילות:</span></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>מבוך חוויתי ומאתגר בין צמחי הפסיפלורה</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>אפיית פיתות על הסאג'</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>הכנת עציצים וקישוט עם גמר עונת הקטיף (החל ממאי)</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>הפרחת בועות סבון</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>משחקי חצר ופינת ציור</td>
-                  </tr>
-              </table>
-              <picture style="position:absolute; bottom:0; right:5%; width:30%; z-index:2;">
-                  <img src="images/activities/plant-03.png" style="width:100%;">
-              </picture>
-          </div>
-          <div style="width:60%; position:relative; padding:5px;">
-              
-              <div id="carouselExampleIndicators-02" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner" >
-                      <div class="carousel-item active" data-bs-interval="3000">
-                          <img src="images/activities/slide-02/01.jpg" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="3000">
-                          <img src="images/activities/slide-02/02.jpg" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="3000">
-                          <img src="images/activities/slide-02/03.jpg" class="d-block w-100">
-                      </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                  </button>
-              </div>
-  
-              <div class="triangle triangle-tl"></div>
-              <div class="triangle triangle-tr"></div>
-              <div class="triangle triangle-br"></div>
-              <div class="triangle triangle-bl"></div>
-  
-          </div>
-      </div>
-  </section>
-  <section style="position:relative; background:#E0EECA; ">
-  
-      <div class="outer-custom-shape-divider-top flip-vertical" style="position:relative; z-index:2;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-              <path fill="white" fill-opacity="1" d="M0,64L40,58.7C80,53,160,43,240,69.3C320,96,400,160,480,192C560,224,640,224,720,213.3C800,203,880,181,960,149.3C1040,117,1120,75,1200,85.3C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
-          </svg>
-      </div>
-  
-      <div style="display:flex; flex-direction:row; padding: 3%;">
-          <div style="width:60%; position:relative; padding:5px;">
-              
-              <div id="carouselExampleIndicators-03" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner" >
-                      <div class="carousel-item active" data-bs-interval="3000">
-                          <img src="images/activities/slide-03/01.jpg" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="3000">
-                          <img src="images/activities/slide-03/02.jpg" class="d-block w-100">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="3000">
-                          <img src="images/activities/slide-03/03.jpg" class="d-block w-100">
-                      </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                  </button>
-              </div>
-  
-              <div class="triangle triangle-tl"></div>
-              <div class="triangle triangle-tr"></div>
-              <div class="triangle triangle-br"></div>
-              <div class="triangle triangle-bl"></div>
-  
-          </div>
-  
-          <div dir="rtl" style="position:relative; flex:1;">
-              
-              <table style="position:relative; z-index:3; font-weight:500; color:#007F0E;">
-                  <tr>
-                      <td colspan="3">
-                          <div style="text-align:right;">
-                              <h2>מתחם פיקניק ונוחות</h2>
-                              <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 100" style="margin-bottom:10px;">
-                                  <path fill='transparent' stroke='#007F0E' stroke-width="10" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
-                              </svg>
-                          </div>
-                      </td>
-                  </tr>
-  
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fa fa-child fa-lg"></i><span style="margin:0 5px;">גילאים: </span></td>
-                      <td></td>
-                      <td>3 - 99</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td style="white-space: nowrap;"><i class="fas fa-tasks" aria-hidden="true"></i><span style="margin:0 5px;">פעילות:</span></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>רחבה ענקית מקורה/מוצלת, עם ספסלי קק"ל, שולחנות וכסאות</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>פינת קפה, מקרר, תנור ורמקול בידורית</td>
-                  </tr>
-                  <tr style="vertical-align:top;">
-                      <td></td>
-                      <td style="padding-left:5px;">&#x25CF;</td>
-                      <td>שרותים צמודים</td>
-                  </tr>
-              </table>
-              <picture style="position:absolute; bottom:0; left:5%; width:40%; z-index:2;">
-                  <img src="images/activities/picnic-basket.png" style="width:100%;">
-              </picture>
-          </div>
-      </div>
-  
-  </section>
-  <button id="btn_toggleOvrlay" type="button" class="btn shadow-none" style="position:fixed; background-color:#EB5457; border-radius:0 50rem 50rem 0; left:0; bottom:15%; color:white; padding:0 80px; z-index:998;"><h3>רכישת כרטיסים</h3><h6>לפעילויות בחווה</h6></button>
+        
+        <div style="display:flex; height:100vh; min-height:350px; background: url('images/fun/header.jpg') no-repeat center center; background-size:cover;">
+            
+            <h1 dir="rtl" style="align-self:center; margin: 0 auto; text-align:center; color:white; ">
+                בואו להנות בחווה<br />
+                בשפע של פעילויות<br />
+                והכל בכרטיס אחד !
+            </h1>
+            <div class="scroll" style="align-self:center; z-index:11;">
+                <div style="width:100%; height:100%; border-left: 5px solid white; border-bottom: 5px solid white; transform: rotate(-45deg);"></div>
+            </div>
+        </div>
+    
+        <div class="inner-custom-shape-divider-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#E0EECA" fill-opacity="1" d="M0,64L40,58.7C80,53,160,43,240,69.3C320,96,400,160,480,192C560,224,640,224,720,213.3C800,203,880,181,960,149.3C1040,117,1120,75,1200,85.3C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+            </svg>        
+        </div>
+    </section>
+    <section style="position:relative; background:#E0EECA; ">
+        
+        <div class="flex-direction-02" style="display:flex; padding: 0 3%;">
+            <div class="carousel-width" style="position:relative; padding:5px;">
+                
+                <div id="carouselExampleIndicators-01" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner" >
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="images/activities/slide-01/01.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/activities/slide-01/02.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/activities/slide-01/03.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-01" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+    
+                <div class="triangle triangle-tl"></div>
+                <div class="triangle triangle-tr"></div>
+                <div class="triangle triangle-br"></div>
+                <div class="triangle triangle-bl"></div>
+                
+            </div>
+            
+            <div class="text-margin" dir="rtl" style="position:relative; flex-grow:1;">
+                <table style="position:relative; z-index:3; font-weight:500; color:#007F0E;">
+                    <tr>
+                        <td colspan="3">
+                            <div style="text-align:right;">
+                                <h2>קטיף עגבניות שרי</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 100" style="margin-bottom:10px;">
+                                    <path fill='transparent' stroke='#007F0E' stroke-width="10" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fa fa-child fa-lg"></i><span style="margin:0 5px;">גילאים: </span></td>
+                        <td></td>
+                        <td>3 - 99</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i><span style="margin:0 5px;">משך: </span></td>
+                        <td></td>
+                        <td>שעה +</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fa fa-cog" aria-hidden="true"></i><span style="margin:0 5px;">ציוד:</span></td>
+                        <td></td>
+                        <td>ביגוד ונעליים נוחים</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        
+                        <td style="white-space: nowrap;"><i class="fas fa-tasks" aria-hidden="true"></i><span style="margin:0 5px;">פעילות:</span></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>סיור טעימות בחממת עגבניות השרי</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>קטיף עצמי ומארז שרי לכל משתתף</td>
+                    </tr>
+                </table>
+                <picture class="image-width-01" style="position:absolute; bottom:0; left:10px; z-index:2; opacity:0.7;">
+                    <img src="images/activities/cherry-tomato-pile-03.png" style="width:100%;">
+                </picture>
+            </div>
+        </div>
+        
+    </section>
+    <section style="position:relative; background:white; ">
+    
+        <div class="outer-custom-shape-divider-top flip-vertical" style="position:relative; z-index:2;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#E0EECA" fill-opacity="1" d="M0,64L40,58.7C80,53,160,43,240,69.3C320,96,400,160,480,192C560,224,640,224,720,213.3C800,203,880,181,960,149.3C1040,117,1120,75,1200,85.3C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+            </svg>
+        </div>
+    
+        <div class="flex-direction-01" style="display:flex; padding:0 3%;">
+            <div dir="rtl" class="text-margin" style="position:relative; flex-grow:1;">
+                <table style="position:relative; z-index:3; font-weight:500; color:#007F0E;">
+                    <tr>
+                        <td colspan="3">
+                            <div style="text-align:right;">
+                                <h2>הרפתקאות בטבע</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 100" style="margin-bottom:10px;">
+                                    <path fill='transparent' stroke='#007F0E' stroke-width="10" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fa fa-child fa-lg"></i><span style="margin:0 5px;">גילאים: </span></td>
+                        <td></td>
+                        <td>3 - 99</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i><span style="margin:0 5px;">משך: </span></td>
+                        <td></td>
+                        <td>שעה +</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fa fa-cog" aria-hidden="true"></i><span style="margin:0 5px;">ציוד:</span></td>
+                        <td></td>
+                        <td>ביגוד ונעליים נוחים</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fas fa-tasks" aria-hidden="true"></i><span style="margin:0 5px;">פעילות:</span></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>מבוך חוויתי ומאתגר בין צמחי הפסיפלורה</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>אפיית פיתות על הסאג'</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>הכנת עציצים וקישוט עם גמר עונת הקטיף (החל ממאי)</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>הפרחת בועות סבון</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>משחקי חצר ופינת ציור</td>
+                    </tr>
+                </table>
+                <picture class="image-width-02" style="position:absolute; bottom:0; left:5%; z-index:2; opacity:0.7;">
+                    <img src="images/activities/plant-03.png" style="width:100%;">
+                </picture>
+            </div>
+            <div class="carousel-width" style="position:relative; padding:5px;">
+                
+                <div id="carouselExampleIndicators-02" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner" >
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="images/activities/slide-02/01.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/activities/slide-02/02.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/activities/slide-02/03.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-02" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+    
+                <div class="triangle triangle-tl"></div>
+                <div class="triangle triangle-tr"></div>
+                <div class="triangle triangle-br"></div>
+                <div class="triangle triangle-bl"></div>
+    
+            </div>
+        </div>
+    </section>
+    <section style="position:relative; background:#E0EECA; ">
+    
+        <div class="outer-custom-shape-divider-top flip-vertical" style="position:relative; z-index:2;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="white" fill-opacity="1" d="M0,64L40,58.7C80,53,160,43,240,69.3C320,96,400,160,480,192C560,224,640,224,720,213.3C800,203,880,181,960,149.3C1040,117,1120,75,1200,85.3C1280,96,1360,160,1400,192L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+            </svg>
+        </div>
+    
+        <div class="flex-direction-02" style="display:flex; padding:0 3% 3% 3%;">
+            <div class="carousel-width" style="position:relative; padding:5px;">
+                
+                <div id="carouselExampleIndicators-03" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner" >
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="images/activities/slide-03/01.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/activities/slide-03/02.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="images/activities/slide-03/03.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-03" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+    
+                <div class="triangle triangle-tl"></div>
+                <div class="triangle triangle-tr"></div>
+                <div class="triangle triangle-br"></div>
+                <div class="triangle triangle-bl"></div>
+    
+            </div>
+    
+            <div dir="rtl" class="text-margin" style="position:relative; flex-grow:1;">
+                
+                <table style="position:relative; z-index:3; font-weight:500; color:#007F0E;">
+                    <tr>
+                        <td colspan="3">
+                            <div style="text-align:right;">
+                                <h2>מתחם פיקניק ונוחות</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 100" style="margin-bottom:10px;">
+                                    <path fill='transparent' stroke='#007F0E' stroke-width="10" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fa fa-child fa-lg"></i><span style="margin:0 5px;">גילאים: </span></td>
+                        <td></td>
+                        <td>3 - 99</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td style="white-space: nowrap;"><i class="fas fa-tasks" aria-hidden="true"></i><span style="margin:0 5px;">פעילות:</span></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>רחבה ענקית מקורה/מוצלת, עם ספסלי קק"ל, שולחנות וכסאות</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>פינת קפה, מקרר, תנור ורמקול בידורית</td>
+                    </tr>
+                    <tr style="vertical-align:top;">
+                        <td></td>
+                        <td style="padding-left:5px;">&#x25CF;</td>
+                        <td>שרותים צמודים</td>
+                    </tr>
+                </table>
+                <picture class="image-width-01" style="position:absolute; bottom:0; left:5%; z-index:2; opacity:0.7;">
+                    <img src="images/activities/picnic-basket.png" style="width:100%;">
+                </picture>
+            </div>
+        </div>
+    
+    </section>
+    <button id="btn_toggleOvrlay" type="button" class="btn shadow-none" style="position:fixed; background-color:#EB5457; border-radius:0 50rem 50rem 0; left:0; bottom:15%; color:white; padding:0 80px; z-index:998;"><h3>רכישת כרטיסים</h3><h6>לפעילויות בחווה</h6></button>
 
   
     <section style="background-color:#007F0E; color:white; text-align:center; font-weight:bold; padding:10px 0;">קרדיטים</section>
 
+    <div class="drawer-menu">
+        <div dir="rtl" style="padding:1rem 0;">
+            <i class="fa fa-times fa-2x pointer" aria-hidden="true" onclick="hideDrawerMenu()" style="color:#EB5457;"></i>
+            <!--
+            <input type="checkbox" id="btnHideDrawerMenu" />
+            <label for="btnHideDrawerMenu"><i class="fa fa-times fa-2x pointer" aria-hidden="true" style="color:#EB5457;"></i></label>
+            -->            
+        </div>
+        <nav>
+            <ul dir="rtl" style="display:flex; flex-direction: column; list-style:none; padding:0; margin:0; width:100%;">
+                <li class="nav-item">
+                    <a href="Home" class="nav-link"><h5>ראשי</h5></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 120" style="margin-bottom:10px;">
+                        <path fill='transparent' stroke='rgba(235, 84, 87, 0.3)' stroke-width="5" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
+                    </svg>
+                </li>
+                <li class="nav-item">
+                    <a href="Fun" class="nav-link"><h5>כיף בחווה</h5></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 120" style="margin-bottom:10px;">
+                        <path fill='transparent' stroke='rgba(235, 84, 87, 0.3)' stroke-width="5" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
+                    </svg>
+                </li>
+                <li class="nav-item">
+                    <a href="." class="nav-link"><h5>כתבו עלינו</h5></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 500 120" style="margin-bottom:10px;">
+                        <path fill='transparent' stroke='rgba(235, 84, 87, 0.3)' stroke-width="5" d="M 0 50 Q 50 0, 100 50 Q 150 100, 200 50 Q 250 0, 300 50 Q 350 100, 400 50 Q 450 0, 500 50"></path>
+                    </svg>
+                </li>
+                <li class="nav-item"><a href="." class="nav-link"><h5>צור קשר</h5></a></li>
+            </ul>
+        </nav>
+        
+    </div>
+    
     <div class="ovrly-lyr " style="display:none;">
         
         <div class="cntr-cntnt" style="position:relative; width:100%; height:100%; min-width:800px;">
