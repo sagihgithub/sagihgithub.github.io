@@ -36,12 +36,13 @@
 
 $("#btn_toggleOvrlay").on("click", function () {
     $(".ovrly-lyr").show();
-    //$('.ovrly-lyr').css('display', 'flex');
+    $('body').css('overflow', 'hidden');
     //$('.ovrly-lyr').attr("style", "display: block !important");
 });
 
 function closeOverlay() {
     $(".ovrly-lyr").hide();
+    $('body').css('overflow', 'auto');
     //$('.ovrly-lyr').attr("style", "display: none !important");
 }
 
@@ -70,7 +71,7 @@ $('[data-role=fixed-datepicker]').datepicker({
 $('.btn-number').on("click", function (e) {
     
     e.preventDefault();
-    
+    var viewport = $(this).attr('data-viewport');
     var fieldName = $(this).attr('data-field');
     var type = $(this).attr('data-type');
     var input = $("input[name='" + fieldName + "']");
@@ -88,12 +89,12 @@ $('.btn-number').on("click", function (e) {
                 $(this).attr('disabled', true);
             }
 
-            if ($('#dv_ticketsVol [data-type=plus]').prop('disabled')) {
-                $('#dv_ticketsVol [data-type=plus]').attr('disabled', false);
+            if ($('#dv_' + viewport + '_ticketsVol [data-type=plus]').prop('disabled')) {
+                $('#dv_' + viewport + '_ticketsVol [data-type=plus]').attr('disabled', false);
 
             }
 
-            $('#total').text(parseInt($('#total').text()) - 40);
+            $('#' + viewport + '_total').text(parseInt($('#' + viewport + '_total').text()) - 40);
 
         } else if (type == 'plus') {
             
@@ -108,12 +109,12 @@ $('.btn-number').on("click", function (e) {
                 $(this).attr('disabled', false);
             }
 
-            if ($('#dv_ticketsVol [data-type=minus]').prop('disabled')) {
-                $('#dv_ticketsVol [data-type=minus]').attr('disabled', false);
+            if ($('#dv_' + viewport + '_ticketsVol [data-type=minus]').prop('disabled')) {
+                $('#dv_' + viewport + '_ticketsVol [data-type=minus]').attr('disabled', false);
                 
             }
             
-            $('#total').text(parseInt($('#total').text()) + 40);
+            $('#' + viewport + '_total').text(parseInt($('#' + viewport + '_total').text()) + 40);
         }
     } else {
         input.val(0);
