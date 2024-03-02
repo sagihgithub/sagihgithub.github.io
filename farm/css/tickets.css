@@ -1,3 +1,7 @@
+:root {
+    --landscape-ticket-width: 800px;
+}
+
 @media (orientation: landscape) {
     #landscape_ticket{
         display:block;
@@ -8,9 +12,9 @@
         display:none;
     }
 
-    /*.landscape-min-width {
-        min-width: 800px;
-    }*/
+    .landscape-min-width {
+        min-width: var(--landscape-ticket-width);
+    }
 
     /*.close-icon-position {
         position: absolute;
@@ -28,9 +32,9 @@
         display: block;
     }
 
-    /*.landscape-min-width {
+    .landscape-min-width {
         min-width: auto;
-    }*/
+    }
 
     /*.close-icon-position {
         position: relative;
@@ -66,7 +70,7 @@ h1 {
 }
 
 #landscape_ticket {
-    width: 800px;
+    width: var(--landscape-ticket-width);
     margin: 0 auto;
     background-image: url('../images/tickets/horizontal-ticket-02.png');
     background-size: contain;
