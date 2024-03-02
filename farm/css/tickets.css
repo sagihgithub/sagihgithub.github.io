@@ -1,17 +1,49 @@
-/*.fixed-datepicker {
-    position: relative;
-}*/
+@media (orientation: landscape) {
+    #landscape_ticket{
+        display:block;
+        /*display:flex;*/
+    }
 
-/*input[type="radio"]:checked + .btn {
-    color: #fff;
-    background: #ff60bd !important;
-}*/
+    #portrait_ticket{
+        display:none;
+    }
 
-/*.btn-group .btn {
-    color: #fff;
-    background: #ff60bd !important;
-    border:none;
-}*/
+    /*.landscape-min-width {
+        min-width: 800px;
+    }*/
+
+    /*.close-icon-position {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }*/
+}
+
+@media (orientation: portrait) {
+    #landscape_ticket {
+        display: none;
+    }
+
+    #portrait_ticket {
+        display: block;
+    }
+
+    /*.landscape-min-width {
+        min-width: auto;
+    }*/
+
+    /*.close-icon-position {
+        position: relative;
+        top: auto;
+        right: auto;
+    }*/
+}
+
+
+
+h1 {
+    margin: 0;
+}
 
 .ovrly-lyr {
     position: fixed;
@@ -22,22 +54,56 @@
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.7);
-
-    overflow: auto hidden;
+    /*overflow: auto hidden;*/
+    overflow: auto;
     z-index: 999;
 }
 
+.close-icon-position {
+    /*display: flex;
+    justify-content: end;*/
+    padding:20px;
+}
+
+#landscape_ticket {
+    width: 800px;
+    margin: 0 auto;
+    background-image: url('../images/tickets/horizontal-ticket-02.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    aspect-ratio: 2 / 1;
+}
+
+#portrait_ticket {
+    width: 300px;
+    margin: 0 auto;
+    background-image: url('../images/tickets/portrait-ticket-02.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    aspect-ratio: 1 / 2;
+    margin-bottom:40px;
+}
+
 .btn-outline-primary {
-    color: #0d6efd;
+    /*color: #0d6efd;*/
+    color: #007F0E;
     background: white !important;
     border: none;
 }
 
 .btn-check:checked + .btn-outline-primary {
-    color: #fff;
+    
+    color: #007F0E;
     background: #E0EECA !important;
     border: none;
 }
+
+.btn-outline-primary:hover, .btn-number:hover {
+    color: #007F0E;
+}
+
 
 .form-control{
     border:none;
@@ -109,10 +175,7 @@
     color: #007F0E;
 }
 
-.btn-outline-primary, .btn-check:checked + .btn-outline-primary {
-    /*color: #E0EECA;*/
-    color: #007F0E;
-}
+
 
 [data-type="minus"] {
     border-radius: 0.25rem 0 0 0.25rem;
@@ -130,6 +193,10 @@
 
 .fa-calendar {
     color: #007F0E;
+}
+
+.portrait-control-margin{
+    margin-bottom:10px;
 }
 
 
