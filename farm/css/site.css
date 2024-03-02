@@ -23,7 +23,6 @@
     .flex-direction-02 {
         flex-direction: row;
     }
-
 }
 
 @media (orientation: portrait) {
@@ -48,7 +47,6 @@
         flex-direction: column-reverse;
         
     }
-
 }
 
 .drawer-menu {
@@ -203,6 +201,11 @@ a.nav-link:hover {
         height: 150px;
     }
 
+.center-main-axis {
+    display: flex;
+    justify-content: center;
+}
+
 .cntr-cntnt {
     display: flex;
     align-items: center;
@@ -223,3 +226,11 @@ a.nav-link:hover {
 .pointer {
     cursor: pointer;
 }
+
+/*.hide-overflow {
+    overflow: hidden;
+}
+
+.show-overflow {
+    overflow: hidden;
+}*/
