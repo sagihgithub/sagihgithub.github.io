@@ -145,7 +145,7 @@ function getShfflImg(puzzle_size, puzzle_dimension, tile_gap, img_vol) {
         //dv_cell.style.backgroundSize = dv_plc_hldr.offsetWidth + "px";
         //dv_cell.style.cssText = "background-image: url('/Images/" + img_id + ".jpg'); background-size: " + puzzle_size + "px; background-position: " + ((curr_row - 1) * tile_size) * -1 + "px " + ((curr_col - 1) * tile_size) * -1 + "px;";
         //dv_cell.style.cssText = "background-image: url('/Images/" + img_id + ".jpg'); background-size: " + puzzle_size + "px; background-position: " + ((curr_shffl_row - 1) * tile_size) * -1 + "px " + ((curr_shffl_col - 1) * tile_size) * -1 + "px;";
-        dv_cell.style.cssText = "background-image: url('/puzzle/Images/puzzle/" + img_id + ".jpg'); background-size: " + puzzle_size + "px; background-position: " + ((curr_shffl_col - 1) * tile_size) * -1 + "px " + ((curr_shffl_row - 1) * tile_size) * -1 + "px;";
+        dv_cell.style.cssText = "background-image: url('/Images/puzzle/" + img_id + ".jpg'); background-size: " + puzzle_size + "px; background-position: " + ((curr_shffl_col - 1) * tile_size) * -1 + "px " + ((curr_shffl_row - 1) * tile_size) * -1 + "px;";
         //dv_cell.className = "tile" + curr_shffl_row + curr_shffl_col;
         //dv_cell.onclick = function () { clickTile(curr_row, curr_col); };
         dv_cell.onclick = function () { clickTile(this); };
