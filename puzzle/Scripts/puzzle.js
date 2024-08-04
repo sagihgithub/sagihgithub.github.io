@@ -2,7 +2,7 @@
 $(function () {
     //chlng01(200, 4, 1, 3);
     //$(".freeze-overlay").css({ "display": "flex" });
-    $(".page-frame").append(getPuzzleChallenge(200, 3, 2, 1, 180));
+    $(".page-frame").append(getPuzzleChallenge(400, 3, 2, 1, 60));
 
 });
 
